@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "nalanda-ui": {
@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nalanda-ui:build"
+            "browserTarget": "nalanda-ui:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nalanda-ui"
+    }
+  },
+  "defaultProject": "nalanda-ui",
+  "cli": {
+    "analytics": "1eb8fca0-bcfd-477f-aea0-20b557e049b4"
+  }
 }
