@@ -9,10 +9,12 @@ import {NavbarModule} from './navbar/navbar.module';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,

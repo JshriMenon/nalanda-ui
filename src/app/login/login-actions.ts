@@ -1,4 +1,4 @@
-import {createAction, props} from '@ngrx/store';
+import {createAction, props, union} from '@ngrx/store';
 
 export const triggerLogin = createAction(
   '[Login Page] Authenticate',
@@ -12,5 +12,5 @@ export const loginSuccess = createAction(
 
 
 export const loginFailure = createAction(
-  '[Login Page] Login Success',
+  '[Login Page] Login Failure',
 );

@@ -1,19 +1,23 @@
 import {createReducer, on} from '@ngrx/store';
 import * as LoginActions from './login-actions';
 
-export interface AppState {
+export interface AuthenticationState {
   authenticated: boolean;
-  user: string;
-};
+  username: string;
+}
 
 export const initialState = {
   authenticated: false,
   user: null
 };
 
-export const loginFeatureKey = 'login';
+export const loginFeatureKey = 'authenticationState';
 
 export const loginReducers = createReducer(
   initialState,
-  on(LoginActions.loginSuccess, state => ({authenticated: true}))
+  on(LoginActions.loginSuccess, (state, {authenticated, username}) => ({
+    ...state,
+    authenticated,
+    username
+  }))
 );
