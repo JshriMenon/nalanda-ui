@@ -10,17 +10,18 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import { LandingComponent } from './landing/landing.component';
+import {ContentModule} from './content/content.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     NavbarModule,
+    ContentModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({

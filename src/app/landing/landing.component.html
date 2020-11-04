@@ -1,1 +1,6 @@
-<p>landing works!</p>
+<div class="landing-container">
+  <app-left-nav [navItems]="navItems" id="nalanda-sidenav"></app-left-nav>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -14,3 +14,8 @@ export const loginSuccess = createAction(
 export const loginFailure = createAction(
   '[Login Page] Login Failure',
 );
+
+export const doLogout = createAction(
+  '[Logout] Logout success',
+  props<{ authenticated: boolean }>()
+);

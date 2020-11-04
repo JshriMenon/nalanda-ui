@@ -1,5 +1,7 @@
 <ul>
   <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
-  <li style="float:right"><a [routerLink]="['/sign-in']"
-                             [routerLinkActive]="['active']">Sign In</a></li>
+  <li *ngIf=!loggedInState style="float:right"><a [routerLink]="['/sign-in']"
+                                                  [routerLinkActive]="['active']">Sign In</a></li>
+  <li *ngIf=loggedInState style="float:right"><a [routerLink]="['/sign-out']"
+                                                 [routerLinkActive]="['active']" (click)="logout()">Sign Out</a></li>
 </ul>

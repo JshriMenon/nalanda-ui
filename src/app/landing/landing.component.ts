@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  navItems = ['Algorithms', 'Data Structures', 'Others'];
+
   constructor() { }
 
   ngOnInit(): void {
