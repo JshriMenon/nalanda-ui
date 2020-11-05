@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {select, Store} from '@ngrx/store';
+import {Store} from '@ngrx/store';
 import {AppState} from '../app.state';
-import {doLogout, triggerLogin} from '../login/login-actions';
+import {doLogout} from '../login/login-actions';
 
 @Component({
   selector: 'app-navigation',

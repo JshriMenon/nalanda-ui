@@ -5,6 +5,7 @@ import {catchError, map, mergeMap} from 'rxjs/operators';
 import {of} from 'rxjs';
 import * as LoginActions from './login-actions';
 import {loginSuccess} from './login-actions';
+import {logoutSuccess} from './login-actions';
 
 @Injectable()
 export class LoginEffects {
@@ -30,6 +31,14 @@ export class LoginEffects {
       )
     ))
   );
+
+  killUser = createEffect(() => this.actions$.pipe(
+    ofType(LoginActions.doLogout),
+    map((action: any) => logoutSuccess({authenticated: false})
+    ))
+  );
+
+
 }
 
 

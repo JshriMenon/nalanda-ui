@@ -19,5 +19,9 @@ export const loginReducers = createReducer(
     ...state,
     authenticated,
     username
+  })),
+  on(LoginActions.logoutSuccess, (state, {authenticated}) => ({
+    ...state,
+    authenticated
   }))
 );

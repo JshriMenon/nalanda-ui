@@ -16,6 +16,11 @@ export const loginFailure = createAction(
 );
 
 export const doLogout = createAction(
-  '[Logout] Logout success',
+  '[Logout] Do LogOut',
+  props<{ authenticated: boolean }>()
+);
+
+export const logoutSuccess = createAction(
+  '[Logout] LogOut Success',
   props<{ authenticated: boolean }>()
 );
